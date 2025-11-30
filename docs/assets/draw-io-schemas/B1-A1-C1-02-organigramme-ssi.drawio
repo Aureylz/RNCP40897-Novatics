@@ -1,0 +1,127 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.2.3">
+  <diagram name="Organigramme SSI Novatics" id="organigramme-ssi">
+    <mxGraphModel dx="-23" dy="1187" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="note-ciso" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#FEF3C7;strokeColor=#EF9636;fontSize=11;align=left;spacingLeft=5;size=15;" value="&lt;b&gt;Position stratégique :&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;CISO membre du COMEX&lt;br&gt;Accès direct au CEO&lt;br&gt;Budget dédié : 300 K€&lt;/div&gt;" vertex="1">
+          <mxGeometry height="82" width="145" x="1909" y="-342" as="geometry" />
+        </mxCell>
+        <mxCell id="QsadsueQhi4f2IpquS17-19" edge="1" parent="1" source="QsadsueQhi4f2IpquS17-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=classic;endFill=1;strokeWidth=1;endSize=8;strokeColor=light-dark(#03538C,#90B2CA);" target="QsadsueQhi4f2IpquS17-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QsadsueQhi4f2IpquS17-20" edge="1" parent="1" source="QsadsueQhi4f2IpquS17-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=classic;endFill=1;strokeWidth=1;endSize=8;strokeColor=light-dark(#41bec7, #ededed);" target="QsadsueQhi4f2IpquS17-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QsadsueQhi4f2IpquS17-21" edge="1" parent="1" source="QsadsueQhi4f2IpquS17-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=classic;endFill=1;strokeWidth=1;endSize=8;strokeColor=light-dark(#03538C,#90B2CA);" target="QsadsueQhi4f2IpquS17-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QsadsueQhi4f2IpquS17-22" edge="1" parent="1" source="QsadsueQhi4f2IpquS17-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=classic;endFill=1;strokeWidth=1;endSize=8;strokeColor=light-dark(#03538C,#90B2CA);" target="QsadsueQhi4f2IpquS17-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QsadsueQhi4f2IpquS17-23" edge="1" parent="1" source="QsadsueQhi4f2IpquS17-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=classic;endFill=1;strokeWidth=1;endSize=8;strokeColor=light-dark(#03538C,#90B2CA);" target="QsadsueQhi4f2IpquS17-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QsadsueQhi4f2IpquS17-24" edge="1" parent="1" source="QsadsueQhi4f2IpquS17-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=classic;endFill=1;strokeWidth=1;endSize=8;strokeColor=light-dark(#03538C,#90B2CA);" target="QsadsueQhi4f2IpquS17-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QsadsueQhi4f2IpquS17-25" edge="1" parent="1" source="QsadsueQhi4f2IpquS17-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=classic;endFill=1;strokeWidth=1;endSize=8;strokeColor=light-dark(#03538C,#90B2CA);" target="QsadsueQhi4f2IpquS17-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QsadsueQhi4f2IpquS17-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#6F0000;fillColor=#a20025;fontSize=9;fontColor=#ffffff;" value="&lt;b&gt;Alexandre DUBOIS&lt;/b&gt;&lt;br&gt;CEO &amp; Fondateur&lt;br&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;Sponsor SSI&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="140" x="1390" y="-320" as="geometry" />
+        </mxCell>
+        <mxCell id="QsadsueQhi4f2IpquS17-32" edge="1" parent="1" source="QsadsueQhi4f2IpquS17-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=light-dark(#03538C,#90B2CA);strokeWidth=1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;endSize=8;" target="QsadsueQhi4f2IpquS17-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QsadsueQhi4f2IpquS17-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#2A526E;fontColor=#FFFFFF;fontSize=9;dashed=1;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;" value="&lt;b&gt;Dr. Lena ROSTOVA&lt;/b&gt;&lt;br&gt;CTO&lt;br&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;Sécurité code, DevSecOps&lt;/font&gt;" vertex="1">
+          <mxGeometry height="55" width="130" x="1553" y="-238" as="geometry" />
+        </mxCell>
+        <mxCell id="QsadsueQhi4f2IpquS17-30" edge="1" parent="1" source="QsadsueQhi4f2IpquS17-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=light-dark(#03538C,#90B2CA);strokeWidth=1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;endSize=8;" target="QsadsueQhi4f2IpquS17-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QsadsueQhi4f2IpquS17-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#2A526E;fillColor=#2A526E;fontColor=#FFFFFF;fontSize=9;" value="&lt;b&gt;Marco ROSSI&lt;/b&gt;&lt;br&gt;COO&lt;br&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;Sécurité OT, Supply Chain&lt;/font&gt;" vertex="1">
+          <mxGeometry height="55" width="130" x="1553" y="162" as="geometry" />
+        </mxCell>
+        <mxCell id="QsadsueQhi4f2IpquS17-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#2A526E;fillColor=#2A526E;fontColor=#FFFFFF;fontSize=9;" value="&lt;b&gt;Claire DELACROIX&lt;/b&gt;&lt;br&gt;CFO&lt;br&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;Budget SSI, Assurance&lt;/font&gt;" vertex="1">
+          <mxGeometry height="55" width="130" x="1553" y="-78" as="geometry" />
+        </mxCell>
+        <mxCell id="QsadsueQhi4f2IpquS17-26" edge="1" parent="1" source="QsadsueQhi4f2IpquS17-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=light-dark(#41bec7, #ededed);strokeWidth=1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;endSize=8;" target="QsadsueQhi4f2IpquS17-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QsadsueQhi4f2IpquS17-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#006EAF;strokeWidth=3;fillColor=#1ba1e2;fontColor=#ffffff;fontSize=9;" value="&lt;b&gt;Mei Lin ZHAO&lt;/b&gt;&lt;br&gt;CISO&lt;br&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;Pilotage SSI, Conformité&lt;/font&gt;" vertex="1">
+          <mxGeometry height="55" width="130" x="1553" y="2" as="geometry" />
+        </mxCell>
+        <mxCell id="QsadsueQhi4f2IpquS17-31" edge="1" parent="1" source="QsadsueQhi4f2IpquS17-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=light-dark(#03538C,#90B2CA);strokeWidth=1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;endSize=8;" target="QsadsueQhi4f2IpquS17-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QsadsueQhi4f2IpquS17-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#2A526E;fontColor=#FFFFFF;fontSize=9;dashed=1;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;" value="&lt;b&gt;Sarah AL-FAYED&lt;/b&gt;&lt;br&gt;CCO&lt;br&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;Sécurité contrats&lt;/font&gt;" vertex="1">
+          <mxGeometry height="55" width="130" x="1553" y="-158" as="geometry" />
+        </mxCell>
+        <mxCell id="QsadsueQhi4f2IpquS17-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#2A526E;fillColor=#2A526E;fontColor=#FFFFFF;fontSize=9;" value="&lt;b&gt;Marc TIBERI&lt;/b&gt;&lt;br&gt;CSO&lt;br&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;Partenariats sensibles&lt;/font&gt;" vertex="1">
+          <mxGeometry height="55" width="130" x="1553" y="82" as="geometry" />
+        </mxCell>
+        <mxCell id="QsadsueQhi4f2IpquS17-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#2A526E;fontColor=#FFFFFF;fontSize=9;dashed=1;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;" value="&lt;b&gt;Béatrice MOREAU&lt;/b&gt;&lt;br&gt;Head of Legal&lt;br&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;RGPD, Conformité&lt;/font&gt;" vertex="1">
+          <mxGeometry height="55" width="130" x="1553" y="322.5" as="geometry" />
+        </mxCell>
+        <mxCell id="QsadsueQhi4f2IpquS17-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#2A526E;fontColor=#FFFFFF;fontSize=9;dashed=1;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;" value="&lt;b&gt;David CHEN&lt;/b&gt;&lt;br&gt;HR Director&lt;br&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;Sensibilisation, Habilitations&lt;/font&gt;" vertex="1">
+          <mxGeometry height="55" width="130" x="1553" y="242" as="geometry" />
+        </mxCell>
+        <mxCell id="QsadsueQhi4f2IpquS17-27" edge="1" parent="1" source="QsadsueQhi4f2IpquS17-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=light-dark(#41bec7, #ededed);strokeWidth=1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;endSize=8;" target="QsadsueQhi4f2IpquS17-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QsadsueQhi4f2IpquS17-28" edge="1" parent="1" source="QsadsueQhi4f2IpquS17-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=light-dark(#41bec7, #ededed);strokeWidth=1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;endSize=8;" target="QsadsueQhi4f2IpquS17-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QsadsueQhi4f2IpquS17-29" edge="1" parent="1" source="QsadsueQhi4f2IpquS17-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=light-dark(#41bec7, #ededed);strokeWidth=1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endFill=1;endSize=8;" target="QsadsueQhi4f2IpquS17-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QsadsueQhi4f2IpquS17-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#41BEC7;fillColor=#E0F7FA;fontColor=#2A526E;fontSize=9;" value="&lt;b&gt;Équipe IT &amp; Cybersecurity&lt;/b&gt;&lt;br&gt;6 personnes" vertex="1">
+          <mxGeometry height="40" width="130" x="1773" y="9.5" as="geometry" />
+        </mxCell>
+        <mxCell id="QsadsueQhi4f2IpquS17-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#41BEC7;fillColor=#E0F7FA;fontColor=#2A526E;fontSize=8;" value="2 Security Engineers&lt;br&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;SOC, Incidents&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="100" x="1954" y="-63" as="geometry" />
+        </mxCell>
+        <mxCell id="QsadsueQhi4f2IpquS17-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#41BEC7;fillColor=#E0F7FA;fontColor=#2A526E;fontSize=8;" value="1 GRC + 1 OT Sec.&lt;br&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;Conformité &amp; Usine&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="100" x="1954" y="82" as="geometry" />
+        </mxCell>
+        <mxCell id="QsadsueQhi4f2IpquS17-14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#41BEC7;fillColor=#E0F7FA;fontColor=#2A526E;fontSize=8;" value="1 DevSecOps&lt;br&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;CI/CD, Secrets&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="100" x="1954" y="9.5" as="geometry" />
+        </mxCell>
+        <mxCell id="QsadsueQhi4f2IpquS17-15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#64748B;fillColor=#F1F5F9;fontColor=#2A526E;fontSize=9;" value="&lt;b&gt;R&amp;D / Engineering&lt;/b&gt;&lt;br&gt;28 pers." vertex="1">
+          <mxGeometry height="40" width="130" x="1773" y="-230.5" as="geometry" />
+        </mxCell>
+        <mxCell id="QsadsueQhi4f2IpquS17-16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#64748B;fillColor=#F1F5F9;fontColor=#2A526E;fontSize=9;" value="&lt;b&gt;Production&lt;/b&gt;&lt;br&gt;18 pers. (Chambéry)" vertex="1">
+          <mxGeometry height="40" width="130" x="1773" y="169.5" as="geometry" />
+        </mxCell>
+        <mxCell id="QsadsueQhi4f2IpquS17-17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#64748B;fillColor=#F1F5F9;fontColor=#2A526E;fontSize=9;" value="&lt;b&gt;Sales &amp; Marketing&lt;/b&gt;&lt;br&gt;9 pers." vertex="1">
+          <mxGeometry height="40" width="130" x="1773" y="-150.5" as="geometry" />
+        </mxCell>
+        <mxCell id="QsadsueQhi4f2IpquS17-40" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#E2E8F0;fillColor=#F1F5F9;arcSize=8;" value="" vertex="1">
+          <mxGeometry height="80" width="210" x="1844" y="297.5" as="geometry" />
+        </mxCell>
+        <mxCell id="QsadsueQhi4f2IpquS17-41" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontStyle=1;fontColor=#2A526E;" value="Légende" vertex="1">
+          <mxGeometry height="20" width="80" x="1854" y="297" as="geometry" />
+        </mxCell>
+        <mxCell id="QsadsueQhi4f2IpquS17-42" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#2A526E;fillColor=#2A526E;" value="" vertex="1">
+          <mxGeometry height="15" width="20" x="1854" y="327.5" as="geometry" />
+        </mxCell>
+        <mxCell id="QsadsueQhi4f2IpquS17-43" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=8;" value="COMEX" vertex="1">
+          <mxGeometry height="20" width="60" x="1879" y="325.5" as="geometry" />
+        </mxCell>
+        <mxCell id="QsadsueQhi4f2IpquS17-44" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#41BEC7;fillColor=#41BEC7;" value="" vertex="1">
+          <mxGeometry height="15" width="20" x="1854" y="353.5" as="geometry" />
+        </mxCell>
+        <mxCell id="QsadsueQhi4f2IpquS17-45" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=8;" value="Équipe SSI" vertex="1">
+          <mxGeometry height="20" width="60" x="1879" y="351.5" as="geometry" />
+        </mxCell>
+        <mxCell id="QsadsueQhi4f2IpquS17-46" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#64748B;fillColor=#F1F5F9;" value="" vertex="1">
+          <mxGeometry height="15" width="20" x="1957" y="338" as="geometry" />
+        </mxCell>
+        <mxCell id="QsadsueQhi4f2IpquS17-47" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=8;" value="Départements" vertex="1">
+          <mxGeometry height="20" width="72" x="1982" y="336" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

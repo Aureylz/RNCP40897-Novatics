@@ -1,0 +1,26 @@
+# Fichiers système
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# IDE
+.idea/
+*.sublime-*
+
+# Temporaires Typst
+*.typst.tmp
+
+# Logs
+*.log
+
+# Node (si scripts JS)
+node_modules/
+
+# Python (si scripts Python)
+__pycache__/
+*.pyc
+.venv/
+
+# PDF générés
+docs/output

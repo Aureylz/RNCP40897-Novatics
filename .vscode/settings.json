@@ -1,0 +1,24 @@
+{
+  "typst-lsp.exportPdf": "onSave",
+  "typst-lsp.rootPath": "docs",
+  "typst-lsp.semanticTokens": "enable",
+  "editor.formatOnSave": true,
+  "editor.wordWrap": "on",
+  "[typst]": {
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "comments": "on",
+      "strings": "on",
+      "other": "on"
+    },
+    "editor.tabSize": 2
+  },
+  "files.associations": {
+    "*.typ": "typst"
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true
+  }
+}
