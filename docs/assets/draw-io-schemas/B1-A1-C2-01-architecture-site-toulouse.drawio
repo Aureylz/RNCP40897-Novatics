@@ -1,0 +1,357 @@
+<mxfile host="app.diagrams.net" agent="Claude AI" version="24.0.0">
+  <diagram name="Architecture Site Toulouse" id="toulouse-detailed">
+    <mxGraphModel dx="1800" dy="1400" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- ==================== TITRE ==================== -->
+        <mxCell id="title-box" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#2A526E;fillColor=#E8F4FD;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="1574" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="title-main" value="NOVATICS - Architecture Site TOULOUSE (Siège R&amp;D)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=24;fontStyle=1;fontColor=#2A526E;" vertex="1" parent="1">
+          <mxGeometry x="60" y="50" width="650" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="title-sub" value="12 Avenue de l'Aéronautique, 31400 Toulouse | 62 collaborateurs | toulouse.novatics.corp" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontColor=#64748B;" vertex="1" parent="1">
+          <mxGeometry x="60" y="85" width="600" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="title-ref" value="Réf: NOV-SSI-2025-005-C | v1.0 | Classification: Confidentiel Entreprise" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontSize=10;fontColor=#64748B;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="85" width="500" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- ==================== WAN / INTERNET ==================== -->
+        <mxCell id="wan-zone" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEF2F2;strokeWidth=2;strokeDashArray=8 8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="140" width="400" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wan-label" value="WAN / INTERNET" style="text;html=1;strokeColor=none;fillColor=#DC2626;align=center;verticalAlign=middle;fontSize=10;fontStyle=1;fontColor=#FFFFFF;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="150" width="120" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="wan-isp" value="Orange Pro&#xa;FTTH 1Gbps&#xa;80.15.xxx.xxx/29" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FFFFFF;fontSize=9;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="175" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="wan-backup" value="SFR 4G/5G&#xa;(Backup)&#xa;Failover auto" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FFFFFF;fontSize=9;align=center;" vertex="1" parent="1">
+          <mxGeometry x="170" y="175" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="wan-vpn-partners" value="VPN Partenaires&#xa;DGA, Airbus&#xa;IPsec IKEv2" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#7C3AED;fillColor=#EDE9FE;fontSize=9;align=center;" vertex="1" parent="1">
+          <mxGeometry x="280" y="175" width="90" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- ==================== FIREWALL PÉRIMÈTRE ==================== -->
+        <mxCell id="fw-zone" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#991B1B;fillColor=#FEE2E2;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="240" width="400" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="fw-label" value="PARE-FEU PÉRIMÈTRE" style="text;html=1;strokeColor=none;fillColor=#991B1B;align=center;verticalAlign=middle;fontSize=10;fontStyle=1;fontColor=#FFFFFF;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="250" width="160" height="18" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="gandalf-fw-1" value="gandalf-fw-01&#xa;OPNsense 24.1&#xa;192.168.1.1&#xa;(CARP Master)" style="shape=mxgraph.cisco.security.firewall;html=1;pointerEvents=1;dashed=0;fillColor=#DC2626;strokeColor=#991B1B;strokeWidth=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;fontSize=8;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="275" width="70" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="gandalf-fw-2" value="gandalf-fw-02&#xa;OPNsense 24.1&#xa;192.168.1.2&#xa;(CARP Backup)" style="shape=mxgraph.cisco.security.firewall;html=1;pointerEvents=1;dashed=0;fillColor=#F87171;strokeColor=#991B1B;strokeWidth=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="180" y="275" width="70" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="fw-vip" value="VIP: 192.168.1.254&#xa;Suricata IPS&#xa;WireGuard VPN" style="text;html=1;strokeColor=#991B1B;fillColor=#FFFFFF;align=center;verticalAlign=middle;fontSize=8;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="280" width="100" height="45" as="geometry" />
+        </mxCell>
+        
+        <!-- ==================== DMZ ==================== -->
+        <mxCell id="dmz-zone" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#F59E0B;fillColor=#FEF3C7;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="460" y="140" width="350" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="dmz-label" value="ZONE DMZ - VLAN 60 (MIRKWOOD) - 10.10.60.0/24" style="text;html=1;strokeColor=none;fillColor=#F59E0B;align=center;verticalAlign=middle;fontSize=10;fontStyle=1;fontColor=#FFFFFF;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="150" width="330" height="18" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="dmz-haproxy" value="haproxy-01&#xa;HAProxy 2.8&#xa;10.10.60.10&#xa;Reverse Proxy" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#F59E0B;fillColor=#FFFFFF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="480" y="180" width="90" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="dmz-waf" value="modsec-01&#xa;ModSecurity 3&#xa;10.10.60.11&#xa;WAF (OWASP CRS)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#F59E0B;fillColor=#FFFFFF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="590" y="180" width="90" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="dmz-mail" value="mail-relay-01&#xa;Postfix + Rspamd&#xa;10.10.60.20&#xa;Relay SMTP" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#F59E0B;fillColor=#FFFFFF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="700" y="180" width="90" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="dmz-bastion" value="bastion-01&#xa;SSH Gateway&#xa;10.10.60.30&#xa;Teleport" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#F59E0B;fillColor=#FFFFFF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="480" y="250" width="90" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="dmz-dns-ext" value="dns-ext-01&#xa;BIND9 (récursif)&#xa;10.10.60.53&#xa;DNS Public" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#F59E0B;fillColor=#FFFFFF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="590" y="250" width="90" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="dmz-switch" value="mirkwood-sw-01&#xa;HP 2530-24G&#xa;10.10.60.254" style="shape=mxgraph.cisco.switches.workgroup_switch;html=1;pointerEvents=1;dashed=0;fillColor=#F59E0B;strokeColor=#B45309;strokeWidth=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;fontSize=7;fontColor=#B45309;" vertex="1" parent="1">
+          <mxGeometry x="710" y="265" width="60" height="25" as="geometry" />
+        </mxCell>
+        
+        <!-- ==================== CORE NETWORK ==================== -->
+        <mxCell id="core-zone" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#314354;fillColor=#CBD5E1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="360" width="770" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="core-label" value="INFRASTRUCTURE RÉSEAU CORE" style="text;html=1;strokeColor=none;fillColor=#314354;align=center;verticalAlign=middle;fontSize=10;fontStyle=1;fontColor=#FFFFFF;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="370" width="200" height="18" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="minas-tirith-rtr" value="minas-tirith-rtr&#xa;Cisco ISR 4331&#xa;10.10.0.1&#xa;Core L3 / OSPF" style="shape=mxgraph.cisco.routers.router;html=1;pointerEvents=1;dashed=0;fillColor=#2A526E;strokeColor=#1E3A5F;strokeWidth=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;fontSize=8;fontStyle=1;fontColor=#2A526E;" vertex="1" parent="1">
+          <mxGeometry x="70" y="400" width="78" height="52" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="barad-dur-sw" value="barad-dur-sw&#xa;Cisco C9300-48P&#xa;10.10.0.2&#xa;Core L2 Stack" style="shape=mxgraph.cisco.switches.workgroup_switch;html=1;pointerEvents=1;dashed=0;fillColor=#2A526E;strokeColor=#1E3A5F;strokeWidth=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;fontSize=8;fontStyle=1;fontColor=#2A526E;" vertex="1" parent="1">
+          <mxGeometry x="200" y="410" width="78" height="32" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="orthanc-sw" value="orthanc-sw&#xa;Cisco C9200-24P&#xa;10.10.0.3&#xa;Distrib R&amp;D" style="shape=mxgraph.cisco.switches.workgroup_switch;html=1;pointerEvents=1;dashed=0;fillColor=#7C5F8B;strokeColor=#5B4569;strokeWidth=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;fontSize=8;fontColor=#7C5F8B;" vertex="1" parent="1">
+          <mxGeometry x="330" y="410" width="78" height="32" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="isengard-sw" value="isengard-sw&#xa;Cisco C9200-48P&#xa;10.10.0.4&#xa;Distrib IT" style="shape=mxgraph.cisco.switches.workgroup_switch;html=1;pointerEvents=1;dashed=0;fillColor=#2A526E;strokeColor=#1E3A5F;strokeWidth=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;fontSize=8;fontColor=#2A526E;" vertex="1" parent="1">
+          <mxGeometry x="460" y="410" width="78" height="32" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="lorien-sw" value="lorien-sw&#xa;Cisco C9200-24P&#xa;10.10.0.5&#xa;Distrib Sécu" style="shape=mxgraph.cisco.switches.workgroup_switch;html=1;pointerEvents=1;dashed=0;fillColor=#059669;strokeColor=#047857;strokeWidth=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;fontSize=8;fontColor=#059669;" vertex="1" parent="1">
+          <mxGeometry x="590" y="410" width="78" height="32" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="erebor-sw" value="erebor-sw&#xa;Cisco C9200-24P&#xa;10.10.0.6&#xa;Distrib Srv/Backup" style="shape=mxgraph.cisco.switches.workgroup_switch;html=1;pointerEvents=1;dashed=0;fillColor=#314354;strokeColor=#1E3A5F;strokeWidth=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;fontSize=8;fontColor=#314354;" vertex="1" parent="1">
+          <mxGeometry x="720" y="410" width="78" height="32" as="geometry" />
+        </mxCell>
+        
+        <!-- ==================== ZONE IT CORPORATE ==================== -->
+        <mxCell id="it-zone" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#2A526E;fillColor=#DBEAFE;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="490" width="250" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="it-label" value="ZONE IT - VLAN 10 (SHIRE) - 10.10.10.0/24" style="text;html=1;strokeColor=none;fillColor=#2A526E;align=center;verticalAlign=middle;fontSize=9;fontStyle=1;fontColor=#FFFFFF;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="500" width="230" height="16" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="it-switch" value="hobbiton-sw-01&#xa;HP 2530-48G&#xa;Access" style="shape=mxgraph.cisco.switches.workgroup_switch;html=1;pointerEvents=1;dashed=0;fillColor=#2A526E;strokeColor=#1E3A5F;strokeWidth=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;fontSize=7;fontColor=#2A526E;" vertex="1" parent="1">
+          <mxGeometry x="140" y="520" width="60" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="it-workstations" value="~35 Postes Windows 11&#xa;Finance, HR, Admin&#xa;802.1X + NAC" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#2A526E;fillColor=#FFFFFF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="565" width="100" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="it-printers" value="Imprimantes&#xa;HP LaserJet&#xa;VLAN dédié" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#2A526E;fillColor=#FFFFFF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="170" y="565" width="80" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="it-wifi" value="WiFi Corp&#xa;UniFi AP&#xa;WPA3-Enterprise&#xa;SSID: NOVATICS-CORP" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#2A526E;fillColor=#FFFFFF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="620" width="100" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="it-voip" value="VoIP&#xa;3CX PBX&#xa;VLAN 15" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#2A526E;fillColor=#FFFFFF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="170" y="620" width="80" height="55" as="geometry" />
+        </mxCell>
+        
+        <!-- ==================== ZONE R&D ==================== -->
+        <mxCell id="rd-zone" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#7C5F8B;fillColor=#E9D5FF;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="310" y="490" width="280" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="rd-label" value="ZONE R&amp;D - VLAN 20 (RIVENDELL) - 10.10.20.0/24" style="text;html=1;strokeColor=none;fillColor=#7C5F8B;align=center;verticalAlign=middle;fontSize=9;fontStyle=1;fontColor=#FFFFFF;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="500" width="260" height="16" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="rd-switch" value="rivendell-sw-01&#xa;Cisco C9200-24P&#xa;Access" style="shape=mxgraph.cisco.switches.workgroup_switch;html=1;pointerEvents=1;dashed=0;fillColor=#7C5F8B;strokeColor=#5B4569;strokeWidth=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;fontSize=7;fontColor=#7C5F8B;" vertex="1" parent="1">
+          <mxGeometry x="410" y="520" width="60" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="rd-linux" value="~20 Postes Ubuntu/Fedora&#xa;Développeurs SLAM/IA&#xa;Accès GitLab" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#7C5F8B;fillColor=#FFFFFF;fontSize=8;align=center;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="565" width="110" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="rd-mac" value="~8 MacBook Pro&#xa;Design, Tests&#xa;MDM Mosyle" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#7C5F8B;fillColor=#FFFFFF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="455" y="565" width="100" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="rd-lab" value="Lab Prototypage&#xa;Bench de test&#xa;Robots N-Eye" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#D6B656;fillColor=#FEF3C7;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="330" y="620" width="110" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="rd-gpu" value="Station GPU&#xa;NVIDIA A100&#xa;Entraînement IA" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#7C5F8B;fillColor=#FFFFFF;fontSize=8;align=center;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="455" y="620" width="100" height="55" as="geometry" />
+        </mxCell>
+        
+        <!-- ==================== ZONE SÉCURITÉ ==================== -->
+        <mxCell id="sec-zone" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#D1FAE5;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="610" y="490" width="200" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="sec-label" value="ZONE SÉCU - VLAN 40 (VALINOR)" style="text;html=1;strokeColor=none;fillColor=#059669;align=center;verticalAlign=middle;fontSize=9;fontStyle=1;fontColor=#FFFFFF;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="500" width="180" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="sec-subnet" value="10.10.40.0/24" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=8;fontColor=#047857;" vertex="1" parent="1">
+          <mxGeometry x="620" y="516" width="180" height="12" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="lorien-keycloak" value="lorien-keycloak01&#xa;Keycloak 24&#xa;10.10.40.10&#xa;IAM/SSO" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#FFFFFF;fontSize=8;align=center;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="535" width="85" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="lorien-wazuh" value="lorien-wazuh01&#xa;Wazuh 4.7&#xa;10.10.40.20&#xa;SIEM/XDR" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#FFFFFF;fontSize=8;align=center;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="715" y="535" width="85" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="lorien-vault" value="lorien-vault01&#xa;HashiCorp Vault&#xa;10.10.40.30&#xa;Secrets Mgmt" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#FFFFFF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="620" y="600" width="85" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="lorien-stepca" value="lorien-step-ca01&#xa;step-ca&#xa;10.10.40.40&#xa;PKI Interne" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#FFFFFF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="715" y="600" width="85" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="lorien-nessus" value="Tenable.io&#xa;Vuln Scanner" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#ECFDF5;fontSize=7;align=center;" vertex="1" parent="1">
+          <mxGeometry x="665" y="665" width="80" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- ==================== ZONE SERVEURS ==================== -->
+        <mxCell id="srv-zone" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#314354;fillColor=#E2E8F0;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="830" y="140" width="380" height="570" as="geometry" />
+        </mxCell>
+        <mxCell id="srv-label" value="DATACENTER - VLAN 50 (AMAN) - 10.10.50.0/24" style="text;html=1;strokeColor=none;fillColor=#314354;align=center;verticalAlign=middle;fontSize=10;fontStyle=1;fontColor=#FFFFFF;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="840" y="150" width="360" height="18" as="geometry" />
+        </mxCell>
+        
+        <!-- Rack 1 - Hyperviseurs -->
+        <mxCell id="rack1" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#64748B;fillColor=#F1F5F9;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="180" width="160" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="rack1-label" value="RACK A - COMPUTE" style="text;html=1;strokeColor=none;fillColor=#64748B;align=center;verticalAlign=middle;fontSize=8;fontStyle=1;fontColor=#FFFFFF;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="860" y="185" width="140" height="14" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="aragorn-hv01" value="aragorn-hv01&#xa;Proxmox VE 8.1&#xa;10.10.50.11&#xa;Dell R750 (256GB)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#314354;fillColor=#FFFFFF;fontSize=8;align=center;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="860" y="205" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="theoden-hv02" value="theoden-hv02&#xa;Proxmox VE 8.1&#xa;10.10.50.12&#xa;Dell R750 (256GB)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#314354;fillColor=#FFFFFF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="860" y="260" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="faramir-hv03" value="faramir-hv03&#xa;Proxmox VE 8.1&#xa;10.10.50.13&#xa;Dell R650 (CI/CD)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#7C5F8B;fillColor=#E9D5FF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="860" y="315" width="130" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Rack 2 - Storage -->
+        <mxCell id="rack2" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#64748B;fillColor=#F1F5F9;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="180" width="160" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="rack2-label" value="RACK B - STORAGE" style="text;html=1;strokeColor=none;fillColor=#64748B;align=center;verticalAlign=middle;fontSize=8;fontStyle=1;fontColor=#FFFFFF;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="185" width="140" height="14" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="erebor-nas01" value="erebor-nas01&#xa;TrueNAS Scale&#xa;10.10.50.21&#xa;Synology RS3621 (100TB)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#314354;fillColor=#FFFFFF;fontSize=8;align=center;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="205" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="erebor-backup01" value="erebor-backup01&#xa;Veeam B&amp;R 12&#xa;10.10.50.22&#xa;Dell R750 (Backup)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#314354;fillColor=#FFFFFF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="260" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="minio-srv" value="minio-srv01&#xa;MinIO (Object)&#xa;10.10.50.23" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#314354;fillColor=#FFFFFF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="315" width="140" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Services VMs -->
+        <mxCell id="vm-section" value="MACHINES VIRTUELLES PRINCIPALES" style="text;html=1;strokeColor=none;fillColor=#64748B;align=center;verticalAlign=middle;fontSize=8;fontStyle=1;fontColor=#FFFFFF;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="375" width="340" height="14" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="vm-gitlab" value="rohan-gitlab01&#xa;GitLab EE 16&#xa;10.10.50.101" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#7C5F8B;fillColor=#E9D5FF;fontSize=8;align=center;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="395" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="vm-sonar" value="rohan-sonar01&#xa;SonarQube 10&#xa;10.10.50.102" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#7C5F8B;fillColor=#E9D5FF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="960" y="395" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="vm-harbor" value="rohan-harbor01&#xa;Harbor 2.10&#xa;10.10.50.103" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#7C5F8B;fillColor=#E9D5FF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="395" width="100" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="vm-odoo" value="comte-odoo01&#xa;Odoo 17&#xa;10.10.50.111" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#2A526E;fillColor=#DBEAFE;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="850" y="445" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="vm-nextcloud" value="comte-nextcloud01&#xa;Nextcloud 28&#xa;10.10.50.112" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#2A526E;fillColor=#DBEAFE;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="960" y="445" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="vm-wiki" value="comte-wiki01&#xa;BookStack&#xa;10.10.50.113" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#2A526E;fillColor=#DBEAFE;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="445" width="100" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Infra transverse -->
+        <mxCell id="infra-section" value="INFRASTRUCTURE TRANSVERSE" style="text;html=1;strokeColor=none;fillColor=#64748B;align=center;verticalAlign=middle;fontSize=8;fontStyle=1;fontColor=#FFFFFF;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="500" width="340" height="14" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="gondor-ad01" value="gondor-ad01&#xa;FreeIPA&#xa;10.10.50.51&#xa;LDAP/Kerberos" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#314354;fillColor=#FFFFFF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="850" y="520" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="gondor-dns01" value="gondor-dns01&#xa;BIND9&#xa;10.10.50.53&#xa;DNS Interne" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#314354;fillColor=#FFFFFF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="960" y="520" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="gondor-ntp01" value="gondor-ntp01&#xa;Chrony&#xa;10.10.50.123&#xa;NTP Stratum 2" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#314354;fillColor=#FFFFFF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="520" width="100" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="gondor-pgsql" value="gondor-pgsql01&#xa;PostgreSQL 16&#xa;10.10.50.54&#xa;DB centrale" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#314354;fillColor=#FFFFFF;fontSize=8;align=center;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="580" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="gondor-redis" value="gondor-redis01&#xa;Redis 7&#xa;10.10.50.55&#xa;Cache" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#314354;fillColor=#FFFFFF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="960" y="580" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="gondor-zabbix" value="gondor-zabbix01&#xa;Zabbix 7&#xa;10.10.50.56&#xa;Monitoring" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#314354;fillColor=#FFFFFF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="580" width="100" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- Management -->
+        <mxCell id="mgmt-section" value="VLAN 99 (ISILDUR) - MANAGEMENT - 10.10.99.0/24" style="text;html=1;strokeColor=none;fillColor=#991B1B;align=center;verticalAlign=middle;fontSize=8;fontStyle=1;fontColor=#FFFFFF;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="645" width="340" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="mgmt-desc" value="iDRAC, iLO, IPMI, Console switches | Accès restreint équipe IT" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=8;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="850" y="660" width="340" height="16" as="geometry" />
+        </mxCell>
+        
+        <!-- ==================== ZONE DR FUTURE ==================== -->
+        <mxCell id="dr-zone" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#6B7280;fillColor=#9CA3AF;strokeWidth=3;strokeDashArray=8 8;opacity=40;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="140" width="200" height="570" as="geometry" />
+        </mxCell>
+        <mxCell id="dr-label" value="LAB DR (Projet Q4 2025)" style="text;html=1;strokeColor=none;fillColor=#6B7280;align=center;verticalAlign=middle;fontSize=10;fontStyle=1;fontColor=#FFFFFF;rounded=1;opacity=70;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="150" width="180" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="dr-desc" value="Zone physiquement isolée&#xa;Conformité II 901 / IGI 1300&#xa;&#xa;━━━━━━━━━━━━━━&#xa;&#xa;• Air-gap réseau&#xa;• Sas d'entrée contrôlé&#xa;• Habilitations requises&#xa;• Postes dédiés DR&#xa;• Chiffrement matériel&#xa;• Journalisation renforcée&#xa;&#xa;━━━━━━━━━━━━━━&#xa;&#xa;Budget: ~180k€&#xa;Délai: 6 mois&#xa;Audit ANSSI prévu" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=9;fontColor=#374151;opacity=70;" vertex="1" parent="1">
+          <mxGeometry x="1245" y="180" width="170" height="280" as="geometry" />
+        </mxCell>
+        
+        <!-- ==================== LÉGENDE ==================== -->
+        <mxCell id="legend-box" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#E2E8F0;fillColor=#F8FAFC;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="730" width="384" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-title" value="LÉGENDE &amp; NOMENCLATURE" style="text;html=1;strokeColor=none;fillColor=#2A526E;align=center;verticalAlign=middle;fontSize=10;fontStyle=1;fontColor=#FFFFFF;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="740" width="180" height="18" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="leg-naming" value="Nomenclature SDA:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=9;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="765" width="150" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-naming-list" value="gondor-* = Infrastructure&#xa;rohan-* = R&amp;D / DevOps&#xa;comte-* = IT Corporate&#xa;lorien-* = Sécurité&#xa;erebor-* = Backup/Storage&#xa;aragorn/theoden = Hyperviseurs&#xa;gandalf/elrond = Firewalls" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=8;fontFamily=Courier New;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="785" width="170" height="100" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="leg-vlans" value="VLANs:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=9;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1430" y="765" width="100" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-vlan-list" value="10 SHIRE = IT Corp&#xa;20 RIVENDELL = R&amp;D&#xa;40 VALINOR = Sécu&#xa;50 AMAN = Serveurs&#xa;60 MIRKWOOD = DMZ&#xa;99 ISILDUR = Mgmt" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=8;fontFamily=Courier New;" vertex="1" parent="1">
+          <mxGeometry x="1430" y="785" width="130" height="85" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="leg-zones-colors" value="Couleurs zones:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=9;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="890" width="150" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-color-it" value="IT" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#2A526E;fillColor=#DBEAFE;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="910" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-color-rd" value="R&amp;D" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#7C5F8B;fillColor=#E9D5FF;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="1295" y="910" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-color-sec" value="Sécu" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#D1FAE5;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="910" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-color-srv" value="Srv" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#314354;fillColor=#E2E8F0;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="1385" y="910" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-color-dmz" value="DMZ" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#F59E0B;fillColor=#FEF3C7;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="1430" y="910" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-color-dr" value="DR" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#6B7280;fillColor=#9CA3AF;fontSize=8;opacity=50;" vertex="1" parent="1">
+          <mxGeometry x="1475" y="910" width="40" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="leg-stats" value="Statistiques: 62 users | ~60 postes | ~25 VMs | 3 hyperviseurs | 100TB storage" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=8;fontColor=#64748B;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="945" width="360" height="16" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

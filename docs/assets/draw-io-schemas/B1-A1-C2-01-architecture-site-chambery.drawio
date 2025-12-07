@@ -1,0 +1,342 @@
+<mxfile host="app.diagrams.net" agent="Claude AI" version="24.0.0">
+  <diagram name="Architecture Site Chambéry OT" id="chambery-ot-detailed">
+    <mxGraphModel dx="1800" dy="1400" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- ==================== TITRE ==================== -->
+        <mxCell id="title-box" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#B85450;fillColor=#FEE2E2;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="1574" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="title-main" value="NOVATICS - Architecture Site CHAMBÉRY (Usine Production)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=24;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="60" y="50" width="700" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="title-sub" value="34 Rue des Marais, Zone Industrielle des Landiers, 73000 Chambéry | 18 collaborateurs | chambery.novatics.corp" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontColor=#64748B;" vertex="1" parent="1">
+          <mxGeometry x="60" y="85" width="700" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="title-ref" value="Réf: NOV-SSI-2025-005-D | v1.0 | Classification: Confidentiel Entreprise" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontSize=10;fontColor=#64748B;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="85" width="500" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- ==================== MODÈLE PURDUE - VUE GÉNÉRALE ==================== -->
+        
+        <!-- ==================== WAN / CONNEXION TOULOUSE ==================== -->
+        <mxCell id="wan-zone" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#7C3AED;fillColor=#EDE9FE;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="140" width="600" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wan-label" value="CONNEXION WAN - LIEN VERS TOULOUSE" style="text;html=1;strokeColor=none;fillColor=#7C3AED;align=center;verticalAlign=middle;fontSize=10;fontStyle=1;fontColor=#FFFFFF;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="150" width="250" height="18" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="wan-sfr" value="SFR Pro&#xa;FTTH 500Mbps&#xa;90.85.xxx.xxx/29" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#7C3AED;fillColor=#FFFFFF;fontSize=9;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="175" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="wan-vpn" value="VPN WireGuard&#xa;Site-to-Site&#xa;→ Toulouse" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#7C3AED;fillColor=#FFFFFF;fontSize=9;align=center;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="175" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="wan-4g" value="4G Backup&#xa;Bouygues&#xa;Failover auto" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#7C3AED;fillColor=#FFFFFF;fontSize=9;align=center;" vertex="1" parent="1">
+          <mxGeometry x="300" y="175" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="wan-toulouse-icon" value="🏢 Siège&#xa;Toulouse" style="text;html=1;strokeColor=#2A526E;fillColor=#E8F4FD;align=center;verticalAlign=middle;fontSize=9;rounded=1;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="165" width="80" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- ==================== FIREWALL PÉRIMÈTRE ==================== -->
+        <mxCell id="fw-zone" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#991B1B;fillColor=#FEE2E2;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="240" width="600" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="fw-label" value="PARE-FEU PÉRIMÈTRE CHAMBÉRY" style="text;html=1;strokeColor=none;fillColor=#991B1B;align=center;verticalAlign=middle;fontSize=10;fontStyle=1;fontColor=#FFFFFF;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="250" width="220" height="18" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="elrond-fw" value="elrond-fw&#xa;OPNsense 24.1&#xa;10.20.0.1&#xa;Périmètre" style="shape=mxgraph.cisco.security.firewall;html=1;pointerEvents=1;dashed=0;fillColor=#DC2626;strokeColor=#991B1B;strokeWidth=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;fontSize=8;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="265" width="70" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="fw-features" value="IPS Suricata | VPN WireGuard | NAT&#xa;Règles strictes IT → OT" style="text;html=1;strokeColor=#991B1B;fillColor=#FFFFFF;align=center;verticalAlign=middle;fontSize=8;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="270" width="180" height="35" as="geometry" />
+        </mxCell>
+        
+        <!-- ==================== ZONE IT USINE (PURDUE LEVEL 4-5) ==================== -->
+        <mxCell id="it-zone" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#2A526E;fillColor=#DBEAFE;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="340" width="300" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="it-label" value="ZONE IT USINE - VLAN 110 - 10.20.10.0/24" style="text;html=1;strokeColor=none;fillColor=#2A526E;align=center;verticalAlign=middle;fontSize=9;fontStyle=1;fontColor=#FFFFFF;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="350" width="280" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="it-purdue" value="Purdue Level 4-5 (Enterprise)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=8;fontColor=#2A526E;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="50" y="366" width="280" height="12" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="it-switch" value="shire-chb-sw01&#xa;HP 2530-24G&#xa;Access IT" style="shape=mxgraph.cisco.switches.workgroup_switch;html=1;pointerEvents=1;dashed=0;fillColor=#2A526E;strokeColor=#1E3A5F;strokeWidth=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;fontSize=7;fontColor=#2A526E;" vertex="1" parent="1">
+          <mxGeometry x="150" y="385" width="60" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="it-workstations" value="~12 Postes Windows&#xa;Bureau production&#xa;Logistique, QC" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#2A526E;fillColor=#FFFFFF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="430" width="100" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="it-printers" value="Imprimantes&#xa;Étiquettes&#xa;Zebra ZT411" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#2A526E;fillColor=#FFFFFF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="170" y="430" width="80" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="it-wifi" value="WiFi Usine&#xa;UniFi AP&#xa;WPA3-Enterprise&#xa;SSID: NOVATICS-CHB" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#2A526E;fillColor=#FFFFFF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="260" y="430" width="70" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="it-odoo-client" value="Odoo Client&#xa;(via VPN→TLS)&#xa;ERP central" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#2A526E;fillColor=#FFFFFF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="485" width="100" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- ==================== DMZ IT/OT (PURDUE LEVEL 3.5) ==================== -->
+        <mxCell id="dmz-itot-zone" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEF2F2;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="360" y="340" width="280" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="dmz-itot-label" value="⚠️ DMZ IT/OT - VLAN 120 - 10.20.20.0/24" style="text;html=1;strokeColor=none;fillColor=#DC2626;align=center;verticalAlign=middle;fontSize=9;fontStyle=1;fontColor=#FFFFFF;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="350" width="260" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="dmz-itot-purdue" value="Purdue Level 3.5 (Industrial DMZ)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=8;fontColor=#DC2626;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="370" y="366" width="260" height="12" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="saruman-fw" value="saruman-fw&#xa;OPNsense&#xa;10.20.20.1&#xa;FW IT/OT" style="shape=mxgraph.cisco.security.firewall;html=1;pointerEvents=1;dashed=0;fillColor=#DC2626;strokeColor=#991B1B;strokeWidth=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;fontSize=8;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="385" width="60" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="dmz-historian" value="historian-01&#xa;OSIsoft PI&#xa;10.20.20.10&#xa;Data Buffer" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FFFFFF;fontSize=8;align=center;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="385" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="dmz-jump" value="jump-ot-01&#xa;Jump Server&#xa;10.20.20.20&#xa;Accès OT" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FFFFFF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="550" y="385" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="dmz-antivirus" value="AV Relay&#xa;Définitions&#xa;10.20.20.30" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FFFFFF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="380" y="450" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dmz-wsus" value="WSUS Proxy&#xa;Patches&#xa;10.20.20.31" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FFFFFF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="460" y="450" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dmz-syslog" value="Syslog Relay&#xa;→ Wazuh TLS&#xa;10.20.20.40" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FFFFFF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="540" y="450" width="80" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="dmz-rules" value="Flux UNIDIRECTIONNELS&#xa;OT → DMZ → IT (lecture seule)&#xa;IT → DMZ (patches, AV)" style="text;html=1;strokeColor=#DC2626;fillColor=#FECACA;align=center;verticalAlign=middle;fontSize=7;rounded=1;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="500" width="240" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- ==================== ZONE OT - NIVEAU 3 (SUPERVISION) ==================== -->
+        <mxCell id="ot-l3-zone" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#B85450;fillColor=#FECACA;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="560" width="600" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ot-l3-label" value="ZONE OT - PURDUE LEVEL 3 (Site Operations) - VLAN 130 (MORDOR)" style="text;html=1;strokeColor=none;fillColor=#B85450;align=center;verticalAlign=middle;fontSize=9;fontStyle=1;fontColor=#FFFFFF;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="570" width="420" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="ot-l3-subnet" value="10.20.30.0/24 | Réseau ISOLÉ" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=8;fontColor=#991B1B;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="570" width="150" height="16" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="mordor-sw" value="mordor-sw-01&#xa;Hirschmann RS30&#xa;Switch industriel&#xa;10.20.30.254" style="shape=mxgraph.cisco.switches.workgroup_switch;html=1;pointerEvents=1;dashed=0;fillColor=#B85450;strokeColor=#991B1B;strokeWidth=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;fontSize=7;fontColor=#B85450;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="595" width="70" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="ot-scada" value="moria-scada01&#xa;Ignition SCADA&#xa;10.20.30.10&#xa;Supervision lignes" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#B85450;fillColor=#FFFFFF;fontSize=8;align=center;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="595" width="100" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="ot-mes" value="moria-mes01&#xa;Odoo Manufacturing&#xa;10.20.30.11&#xa;MES local" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#B85450;fillColor=#FFFFFF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="270" y="595" width="100" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="ot-eng" value="moria-eng01&#xa;Station Ingénieur&#xa;10.20.30.20&#xa;Config automates" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#B85450;fillColor=#FFFFFF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="380" y="595" width="100" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="ot-backup" value="moria-backup01&#xa;Backup OT local&#xa;10.20.30.30&#xa;Veeam Agent" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#B85450;fillColor=#FFFFFF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="490" y="595" width="100" height="55" as="geometry" />
+        </mxCell>
+        
+        <!-- ==================== ZONE OT - NIVEAU 2 (CONTROL) ==================== -->
+        <mxCell id="ot-l2-zone" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#991B1B;fillColor=#FEE2E2;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="700" width="600" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ot-l2-label" value="ZONE OT - PURDUE LEVEL 2 (Area Control) - VLAN 131" style="text;html=1;strokeColor=none;fillColor=#991B1B;align=center;verticalAlign=middle;fontSize=9;fontStyle=1;fontColor=#FFFFFF;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="710" width="350" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="ot-l2-subnet" value="10.20.31.0/24 | HMI &amp; Contrôleurs" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=8;fontColor=#991B1B;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="410" y="710" width="180" height="16" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="ot-l2-sw" value="mordor-sw-02&#xa;Hirschmann RS20&#xa;Level 2" style="shape=mxgraph.cisco.switches.workgroup_switch;html=1;pointerEvents=1;dashed=0;fillColor=#991B1B;strokeColor=#7F1D1D;strokeWidth=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;fontSize=7;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="60" y="735" width="70" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="ot-hmi1" value="HMI-LINE1&#xa;Panel Siemens&#xa;10.20.31.101&#xa;Ligne N-Eye" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#991B1B;fillColor=#FFFFFF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="160" y="735" width="90" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="ot-hmi2" value="HMI-LINE2&#xa;Panel Siemens&#xa;10.20.31.102&#xa;Ligne N-Seeker" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#991B1B;fillColor=#FFFFFF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="260" y="735" width="90" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="ot-plc1" value="PLC-LINE1&#xa;Siemens S7-1500&#xa;10.20.31.201&#xa;Automate L1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#991B1B;fillColor=#FEF3C7;fontSize=8;align=center;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="735" width="90" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="ot-plc2" value="PLC-LINE2&#xa;Siemens S7-1500&#xa;10.20.31.202&#xa;Automate L2" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#991B1B;fillColor=#FEF3C7;fontSize=8;align=center;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="735" width="90" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="ot-safety" value="Safety PLC&#xa;Pilz PNOZ&#xa;10.20.31.210&#xa;Arrêts urgence" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=8;align=center;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="735" width="70" height="55" as="geometry" />
+        </mxCell>
+        
+        <!-- ==================== ZONE OT - NIVEAU 1-0 (PROCESS) ==================== -->
+        <mxCell id="ot-l0-zone" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#7F1D1D;fillColor=#FECACA;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="840" width="600" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ot-l0-label" value="ZONE OT - PURDUE LEVEL 1-0 (Basic Control &amp; Process) - VLAN 132" style="text;html=1;strokeColor=none;fillColor=#7F1D1D;align=center;verticalAlign=middle;fontSize=9;fontStyle=1;fontColor=#FFFFFF;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="850" width="400" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="ot-l0-subnet" value="10.20.32.0/24 | Capteurs &amp; Actionneurs" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=8;fontColor=#7F1D1D;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="850" width="180" height="16" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="ot-line1" value="LIGNE 1 - ASSEMBLAGE N-EYE&#xa;━━━━━━━━━━━━━━━━━━━━━&#xa;• Robots assemblage (6 axes)&#xa;• Convoyeurs&#xa;• Visseuses automatiques&#xa;• Caméras vision industrielle" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#7F1D1D;fillColor=#FFFFFF;fontSize=8;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="60" y="875" width="170" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ot-line2" value="LIGNE 2 - ASSEMBLAGE N-SEEKER&#xa;━━━━━━━━━━━━━━━━━━━━━&#xa;• Postes manuels assistés&#xa;• Cobots Universal Robots&#xa;• Stations de soudure&#xa;• Tests électriques" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#7F1D1D;fillColor=#FFFFFF;fontSize=8;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="245" y="875" width="170" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ot-test" value="ZONE TEST FINAL&#xa;━━━━━━━━━━━━━━&#xa;• Bancs de test&#xa;• Chambre climatique&#xa;• Test RF/GPS&#xa;• Calibration SLAM" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#D6B656;fillColor=#FEF3C7;fontSize=8;align=left;spacingLeft=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="875" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ot-network" value="Profinet&#xa;EtherNet/IP&#xa;Modbus TCP" style="text;html=1;strokeColor=#7F1D1D;fillColor=#FECACA;align=center;verticalAlign=middle;fontSize=7;rounded=1;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="560" y="900" width="70" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- ==================== ZONE TEST ROBOTS (PRODUIT) ==================== -->
+        <mxCell id="test-zone" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#D6B656;fillColor=#FEF3C7;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="660" y="560" width="240" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="test-label" value="ZONE TEST ROBOTS - VLAN 135" style="text;html=1;strokeColor=none;fillColor=#D6B656;align=center;verticalAlign=middle;fontSize=9;fontStyle=1;fontColor=#000000;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="670" y="570" width="220" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="test-subnet" value="10.20.35.0/24 | Robots en validation" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=8;fontColor=#92400E;" vertex="1" parent="1">
+          <mxGeometry x="670" y="586" width="220" height="12" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="test-sw" value="gondolin-sw-01&#xa;Switch Test&#xa;10.20.35.254" style="shape=mxgraph.cisco.switches.workgroup_switch;html=1;pointerEvents=1;dashed=0;fillColor=#D6B656;strokeColor=#B45309;strokeWidth=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;fontSize=7;fontColor=#92400E;" vertex="1" parent="1">
+          <mxGeometry x="740" y="605" width="70" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="test-ncc" value="NCC-TEST&#xa;Station contrôle&#xa;10.20.35.10&#xa;Tests mission" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#D6B656;fillColor=#FFFFFF;fontSize=8;align=center;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="650" width="100" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="test-sim" value="Simulateur&#xa;Environnement&#xa;10.20.35.11&#xa;Tests virtuels" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#D6B656;fillColor=#FFFFFF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="790" y="650" width="100" height="55" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="test-neye" value="🤖 N-Eye #TEST&#xa;Drone en validation&#xa;WiFi: NOVATICS-TEST&#xa;(isolé prod)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#D6B656;fillColor=#FEF3C7;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="680" y="720" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="test-nseeker" value="🤖 N-Seeker #TEST&#xa;Robot terrestre&#xa;en validation" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#D6B656;fillColor=#FEF3C7;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="790" y="720" width="100" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="test-piste" value="PISTE D'ESSAI INDOOR&#xa;━━━━━━━━━━━━━━━━━━&#xa;• 20m parcours N-Seeker&#xa;• Zone vol N-Eye (filet)&#xa;• Obstacles configurables&#xa;• Capteurs de position" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#D6B656;fillColor=#FFFFFF;fontSize=8;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="680" y="795" width="200" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="test-gps" value="GPS Simulator&#xa;Spirent GSS9000&#xa;10.20.35.50" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#D6B656;fillColor=#FFFFFF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="680" y="885" width="90" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="test-rf" value="RF Test Chamber&#xa;Tests antennes&#xa;Faraday cage" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#D6B656;fillColor=#FFFFFF;fontSize=8;align=center;" vertex="1" parent="1">
+          <mxGeometry x="780" y="885" width="100" height="45" as="geometry" />
+        </mxCell>
+        
+        <!-- ==================== LÉGENDE PURDUE ==================== -->
+        <mxCell id="purdue-legend" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#E2E8F0;fillColor=#F8FAFC;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="920" y="140" width="320" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="purdue-title" value="MODÈLE PURDUE (IEC 62443)" style="text;html=1;strokeColor=none;fillColor=#B85450;align=center;verticalAlign=middle;fontSize=10;fontStyle=1;fontColor=#FFFFFF;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="930" y="150" width="300" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="purdue-l5" value="Level 5 - Enterprise Network" style="text;html=1;strokeColor=#2A526E;fillColor=#DBEAFE;align=left;verticalAlign=middle;fontSize=9;rounded=1;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="940" y="180" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="purdue-l5-desc" value="IT Corporate, ERP, Email" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=8;fontColor=#64748B;" vertex="1" parent="1">
+          <mxGeometry x="1125" y="180" width="110" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="purdue-l4" value="Level 4 - Site Business" style="text;html=1;strokeColor=#2A526E;fillColor=#DBEAFE;align=left;verticalAlign=middle;fontSize=9;rounded=1;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="940" y="205" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="purdue-l4-desc" value="Business planning, logistics" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=8;fontColor=#64748B;" vertex="1" parent="1">
+          <mxGeometry x="1125" y="205" width="110" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="purdue-dmz" value="Level 3.5 - Industrial DMZ" style="text;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;align=left;verticalAlign=middle;fontSize=9;rounded=1;spacingLeft=5;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="940" y="230" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="purdue-dmz-desc" value="Historian, Jump, Proxy" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=8;fontColor=#DC2626;" vertex="1" parent="1">
+          <mxGeometry x="1125" y="230" width="110" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="purdue-l3" value="Level 3 - Site Operations" style="text;html=1;strokeColor=#B85450;fillColor=#FECACA;align=left;verticalAlign=middle;fontSize=9;rounded=1;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="940" y="255" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="purdue-l3-desc" value="SCADA, MES, Engineering" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=8;fontColor=#64748B;" vertex="1" parent="1">
+          <mxGeometry x="1125" y="255" width="110" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="purdue-l2" value="Level 2 - Area Supervisory" style="text;html=1;strokeColor=#991B1B;fillColor=#FEE2E2;align=left;verticalAlign=middle;fontSize=9;rounded=1;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="940" y="280" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="purdue-l2-desc" value="HMI, PLC, RTU" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=8;fontColor=#64748B;" vertex="1" parent="1">
+          <mxGeometry x="1125" y="280" width="110" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="purdue-l1" value="Level 1 - Basic Control" style="text;html=1;strokeColor=#7F1D1D;fillColor=#FECACA;align=left;verticalAlign=middle;fontSize=9;rounded=1;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="940" y="305" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="purdue-l1-desc" value="DCS, Controllers" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=8;fontColor=#64748B;" vertex="1" parent="1">
+          <mxGeometry x="1125" y="305" width="110" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="purdue-l0" value="Level 0 - Process" style="text;html=1;strokeColor=#7F1D1D;fillColor=#FECACA;align=left;verticalAlign=middle;fontSize=9;rounded=1;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="940" y="330" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="purdue-l0-desc" value="Sensors, Actuators" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=8;fontColor=#64748B;" vertex="1" parent="1">
+          <mxGeometry x="1125" y="330" width="110" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- Principes sécurité OT -->
+        <mxCell id="ot-principles" value="PRINCIPES SÉCURITÉ OT" style="text;html=1;strokeColor=none;fillColor=#991B1B;align=center;verticalAlign=middle;fontSize=9;fontStyle=1;fontColor=#FFFFFF;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="940" y="365" width="290" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="ot-rules" value="✓ Flux unidirectionnels (data diode logique)&#xa;✓ Pas d'accès Internet direct depuis OT&#xa;✓ Jump server obligatoire pour accès OT&#xa;✓ Authentification forte (pas de passwords par défaut)&#xa;✓ Segmentation par niveau Purdue&#xa;✓ Patch management contrôlé (fenêtres maintenance)&#xa;✓ Logs centralisés via relay syslog&#xa;✓ Backup configurations automates" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=8;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="940" y="390" width="290" height="120" as="geometry" />
+        </mxCell>
+        
+        <!-- ==================== LÉGENDE NOMENCLATURE ==================== -->
+        <mxCell id="naming-legend" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#E2E8F0;fillColor=#F8FAFC;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="920" y="540" width="320" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="naming-title" value="NOMENCLATURE CHAMBÉRY (SDA)" style="text;html=1;strokeColor=none;fillColor=#B85450;align=center;verticalAlign=middle;fontSize=10;fontStyle=1;fontColor=#FFFFFF;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="930" y="550" width="300" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="naming-list" value="elrond-fw = Firewall périmètre Chambéry&#xa;saruman-fw = Firewall DMZ IT/OT&#xa;mordor-sw-* = Switches zone OT&#xa;moria-* = Serveurs OT (SCADA, MES)&#xa;gondolin-sw = Switch zone test robots&#xa;shire-chb-* = IT Usine (Comté Chambéry)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=8;fontFamily=Courier New;spacingLeft=10;spacingTop=5;" vertex="1" parent="1">
+          <mxGeometry x="930" y="580" width="300" height="90" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="vlan-list" value="VLANs Chambéry:&#xa;110 = IT Usine (shire-chb)&#xa;120 = DMZ IT/OT&#xa;130 = OT Level 3 (MORDOR)&#xa;131 = OT Level 2&#xa;132 = OT Level 0-1&#xa;135 = Zone Test Robots" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=8;fontFamily=Courier New;spacingLeft=10;spacingTop=5;" vertex="1" parent="1">
+          <mxGeometry x="930" y="670" width="300" height="100" as="geometry" />
+        </mxCell>
+        
+        <!-- ==================== STATISTIQUES ==================== -->
+        <mxCell id="stats-box" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#E2E8F0;fillColor=#F8FAFC;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="920" y="760" width="320" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="stats-title" value="CAPACITÉ PRODUCTION &amp; STATISTIQUES" style="text;html=1;strokeColor=none;fillColor=#B85450;align=center;verticalAlign=middle;fontSize=10;fontStyle=1;fontColor=#FFFFFF;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="930" y="770" width="300" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="stats-content" value="Surface: 1 200 m²&#xa;Effectif: 18 collaborateurs&#xa;&#xa;CAPACITÉ PRODUCTION:&#xa;• Théorique: 200 robots/an&#xa;• Actuelle: 160 robots/an (80%)&#xa;  - N-Eye: 80 unités/an&#xa;  - N-Seeker: 50 unités/an&#xa;  - N-Sonar: 30 unités/an&#xa;&#xa;ÉQUIPEMENTS RÉSEAU:&#xa;• 2 firewalls (périmètre + IT/OT)&#xa;• 5 switches (2 industriels Hirschmann)&#xa;• ~20 équipements OT&#xa;• ~15 postes de travail" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=8;spacingLeft=10;spacingTop=5;" vertex="1" parent="1">
+          <mxGeometry x="930" y="800" width="300" height="170" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

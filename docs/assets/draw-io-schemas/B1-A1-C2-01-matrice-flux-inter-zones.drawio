@@ -1,0 +1,513 @@
+<mxfile host="app.diagrams.net" agent="Claude AI" version="24.0.0">
+  <diagram name="Matrice Flux Inter-Zones" id="flow-matrix">
+    <mxGraphModel dx="1800" dy="1400" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- ==================== TITRE ==================== -->
+        <mxCell id="title-box" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#2A526E;fillColor=#E8F4FD;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="1574" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="title-main" value="NOVATICS - Matrice des Flux Inter-Zones" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=24;fontStyle=1;fontColor=#2A526E;" vertex="1" parent="1">
+          <mxGeometry x="60" y="50" width="600" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="title-sub" value="Politique de filtrage réseau - Flux autorisés, restreints et interdits | novatics.corp" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontColor=#64748B;" vertex="1" parent="1">
+          <mxGeometry x="60" y="85" width="600" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="title-ref" value="Réf: NOV-SSI-2025-005-F | v1.0 | Classification: Confidentiel Entreprise" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontSize=10;fontColor=#64748B;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="85" width="500" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- ==================== MATRICE PRINCIPALE ==================== -->
+        
+        <!-- En-tête colonnes (DESTINATION) -->
+        <mxCell id="header-dest" value="DESTINATION →" style="text;html=1;strokeColor=none;fillColor=#2A526E;align=center;verticalAlign=middle;fontSize=11;fontStyle=1;fontColor=#FFFFFF;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="140" width="1200" height="25" as="geometry" />
+        </mxCell>
+        
+        <!-- En-tête lignes (SOURCE) -->
+        <mxCell id="header-src" value="SOURCE ↓" style="text;html=1;strokeColor=none;fillColor=#2A526E;align=center;verticalAlign=middle;fontSize=11;fontStyle=1;fontColor=#FFFFFF;rounded=1;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="40" y="350" width="120" height="25" as="geometry" />
+        </mxCell>
+        
+        <!-- Colonnes zones destination -->
+        <mxCell id="col-internet" value="INTERNET&#xa;(TL0)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEF2F2;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="200" y="170" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="col-dmz" value="DMZ&#xa;(TL1)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#F59E0B;fillColor=#FEF3C7;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="310" y="170" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="col-remote" value="DISTANT&#xa;(TL2)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#41BEC7;fillColor=#E0F7FA;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="420" y="170" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="col-cloud" value="CLOUD AWS&#xa;(TL3)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#ECFDF5;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="530" y="170" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="col-it" value="IT CORP&#xa;(TL4)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#2A526E;fillColor=#DBEAFE;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="640" y="170" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="col-rd" value="R&amp;D&#xa;(TL4)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#7C5F8B;fillColor=#E9D5FF;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="750" y="170" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="col-sec" value="SÉCURITÉ&#xa;(TL4)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#D1FAE5;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="860" y="170" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="col-srv" value="SERVEURS&#xa;(TL4)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#314354;fillColor=#E2E8F0;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="970" y="170" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="col-ot" value="OT USINE&#xa;(TL5)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#B85450;fillColor=#FEE2E2;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="170" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="col-robots" value="ROBOTS&#xa;(Produit)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#D6B656;fillColor=#FEF3C7;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="170" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="col-dr" value="LAB DR&#xa;(Futur)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#6B7280;fillColor=#9CA3AF;fontSize=9;fontStyle=1;align=center;opacity=50;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="170" width="100" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- Lignes zones source -->
+        <mxCell id="row-internet" value="INTERNET&#xa;(TL0)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEF2F2;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="90" y="230" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="row-dmz" value="DMZ&#xa;(TL1)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#F59E0B;fillColor=#FEF3C7;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="90" y="290" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="row-remote" value="DISTANT&#xa;(TL2)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#41BEC7;fillColor=#E0F7FA;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="90" y="350" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="row-cloud" value="CLOUD AWS&#xa;(TL3)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#ECFDF5;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="90" y="410" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="row-it" value="IT CORP&#xa;(TL4)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#2A526E;fillColor=#DBEAFE;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="90" y="470" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="row-rd" value="R&amp;D&#xa;(TL4)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#7C5F8B;fillColor=#E9D5FF;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="90" y="530" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="row-sec" value="SÉCURITÉ&#xa;(TL4)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#D1FAE5;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="90" y="590" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="row-srv" value="SERVEURS&#xa;(TL4)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#314354;fillColor=#E2E8F0;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="90" y="650" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="row-ot" value="OT USINE&#xa;(TL5)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#B85450;fillColor=#FEE2E2;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="90" y="710" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="row-robots" value="ROBOTS&#xa;(Produit)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#D6B656;fillColor=#FEF3C7;fontSize=9;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="90" y="770" width="100" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- ==================== CELLULES MATRICE ==================== -->
+        
+        <!-- Ligne INTERNET -->
+        <mxCell id="m-inet-inet" value="—" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#E5E7EB;fillColor=#F3F4F6;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="200" y="230" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-inet-dmz" value="✓&#xa;443, 25" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#D1FAE5;fontSize=9;align=center;fontStyle=1;fontColor=#047857;" vertex="1" parent="1">
+          <mxGeometry x="310" y="230" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-inet-remote" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=14;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="420" y="230" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-inet-cloud" value="✓&#xa;443, 8883" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#D1FAE5;fontSize=9;align=center;fontStyle=1;fontColor=#047857;" vertex="1" parent="1">
+          <mxGeometry x="530" y="230" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-inet-it" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=14;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="640" y="230" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-inet-rd" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=14;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="750" y="230" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-inet-sec" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=14;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="860" y="230" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-inet-srv" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=14;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="970" y="230" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-inet-ot" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=14;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="230" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-inet-robots" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=14;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="230" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-inet-dr" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6B7280;fillColor=#D1D5DB;fontSize=14;align=center;fontStyle=1;fontColor=#374151;opacity=50;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="230" width="100" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- Ligne DMZ -->
+        <mxCell id="m-dmz-inet" value="✓&#xa;80, 443" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#D1FAE5;fontSize=9;align=center;fontStyle=1;fontColor=#047857;" vertex="1" parent="1">
+          <mxGeometry x="200" y="290" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-dmz-dmz" value="—" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#E5E7EB;fillColor=#F3F4F6;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="310" y="290" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-dmz-remote" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=14;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="420" y="290" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-dmz-cloud" value="⚠&#xa;proxy" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#F59E0B;fillColor=#FEF3C7;fontSize=9;align=center;fontStyle=1;fontColor=#92400E;" vertex="1" parent="1">
+          <mxGeometry x="530" y="290" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-dmz-it" value="⚠&#xa;mail,web" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#F59E0B;fillColor=#FEF3C7;fontSize=9;align=center;fontStyle=1;fontColor=#92400E;" vertex="1" parent="1">
+          <mxGeometry x="640" y="290" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-dmz-rd" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=14;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="750" y="290" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-dmz-sec" value="⚠&#xa;logs" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#F59E0B;fillColor=#FEF3C7;fontSize=9;align=center;fontStyle=1;fontColor=#92400E;" vertex="1" parent="1">
+          <mxGeometry x="860" y="290" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-dmz-srv" value="⚠&#xa;auth" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#F59E0B;fillColor=#FEF3C7;fontSize=9;align=center;fontStyle=1;fontColor=#92400E;" vertex="1" parent="1">
+          <mxGeometry x="970" y="290" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-dmz-ot" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=14;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="290" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-dmz-robots" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=14;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="290" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-dmz-dr" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6B7280;fillColor=#D1D5DB;fontSize=14;align=center;fontStyle=1;fontColor=#374151;opacity=50;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="290" width="100" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- Ligne DISTANT -->
+        <mxCell id="m-remote-inet" value="✓&#xa;via NAT" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#D1FAE5;fontSize=9;align=center;fontStyle=1;fontColor=#047857;" vertex="1" parent="1">
+          <mxGeometry x="200" y="350" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-remote-dmz" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=14;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="310" y="350" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-remote-remote" value="—" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#E5E7EB;fillColor=#F3F4F6;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="420" y="350" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-remote-cloud" value="✓&#xa;443" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#D1FAE5;fontSize=9;align=center;fontStyle=1;fontColor=#047857;" vertex="1" parent="1">
+          <mxGeometry x="530" y="350" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-remote-it" value="✓&#xa;VPN" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#D1FAE5;fontSize=9;align=center;fontStyle=1;fontColor=#047857;" vertex="1" parent="1">
+          <mxGeometry x="640" y="350" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-remote-rd" value="⚠&#xa;MFA req" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#F59E0B;fillColor=#FEF3C7;fontSize=9;align=center;fontStyle=1;fontColor=#92400E;" vertex="1" parent="1">
+          <mxGeometry x="750" y="350" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-remote-sec" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=14;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="860" y="350" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-remote-srv" value="⚠&#xa;apps" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#F59E0B;fillColor=#FEF3C7;fontSize=9;align=center;fontStyle=1;fontColor=#92400E;" vertex="1" parent="1">
+          <mxGeometry x="970" y="350" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-remote-ot" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=14;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="350" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-remote-robots" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=14;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="350" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-remote-dr" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6B7280;fillColor=#D1D5DB;fontSize=14;align=center;fontStyle=1;fontColor=#374151;opacity=50;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="350" width="100" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- Ligne CLOUD -->
+        <mxCell id="m-cloud-inet" value="✓&#xa;egress" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#D1FAE5;fontSize=9;align=center;fontStyle=1;fontColor=#047857;" vertex="1" parent="1">
+          <mxGeometry x="200" y="410" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-cloud-dmz" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=14;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="310" y="410" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-cloud-remote" value="✓&#xa;WS" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#D1FAE5;fontSize=9;align=center;fontStyle=1;fontColor=#047857;" vertex="1" parent="1">
+          <mxGeometry x="420" y="410" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-cloud-cloud" value="—" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#E5E7EB;fillColor=#F3F4F6;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="530" y="410" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-cloud-it" value="⚠&#xa;VPN" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#F59E0B;fillColor=#FEF3C7;fontSize=9;align=center;fontStyle=1;fontColor=#92400E;" vertex="1" parent="1">
+          <mxGeometry x="640" y="410" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-cloud-rd" value="⚠&#xa;CI/CD" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#F59E0B;fillColor=#FEF3C7;fontSize=9;align=center;fontStyle=1;fontColor=#92400E;" vertex="1" parent="1">
+          <mxGeometry x="750" y="410" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-cloud-sec" value="✓&#xa;logs" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#D1FAE5;fontSize=9;align=center;fontStyle=1;fontColor=#047857;" vertex="1" parent="1">
+          <mxGeometry x="860" y="410" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-cloud-srv" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=14;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="970" y="410" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-cloud-ot" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=14;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="410" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-cloud-robots" value="✓&#xa;MQTT" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#D1FAE5;fontSize=9;align=center;fontStyle=1;fontColor=#047857;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="410" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-cloud-dr" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6B7280;fillColor=#D1D5DB;fontSize=14;align=center;fontStyle=1;fontColor=#374151;opacity=50;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="410" width="100" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- Ligne IT CORP -->
+        <mxCell id="m-it-inet" value="✓&#xa;proxy" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#D1FAE5;fontSize=9;align=center;fontStyle=1;fontColor=#047857;" vertex="1" parent="1">
+          <mxGeometry x="200" y="470" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-it-dmz" value="✓&#xa;mail" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#D1FAE5;fontSize=9;align=center;fontStyle=1;fontColor=#047857;" vertex="1" parent="1">
+          <mxGeometry x="310" y="470" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-it-remote" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=14;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="420" y="470" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-it-cloud" value="✓&#xa;443" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#D1FAE5;fontSize=9;align=center;fontStyle=1;fontColor=#047857;" vertex="1" parent="1">
+          <mxGeometry x="530" y="470" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-it-it" value="—" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#E5E7EB;fillColor=#F3F4F6;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="640" y="470" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-it-rd" value="⚠&#xa;limited" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#F59E0B;fillColor=#FEF3C7;fontSize=9;align=center;fontStyle=1;fontColor=#92400E;" vertex="1" parent="1">
+          <mxGeometry x="750" y="470" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-it-sec" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=14;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="860" y="470" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-it-srv" value="✓&#xa;apps" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#D1FAE5;fontSize=9;align=center;fontStyle=1;fontColor=#047857;" vertex="1" parent="1">
+          <mxGeometry x="970" y="470" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-it-ot" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=14;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="470" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-it-robots" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=14;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="470" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-it-dr" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6B7280;fillColor=#D1D5DB;fontSize=14;align=center;fontStyle=1;fontColor=#374151;opacity=50;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="470" width="100" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- Ligne R&D -->
+        <mxCell id="m-rd-inet" value="⚠&#xa;proxy" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#F59E0B;fillColor=#FEF3C7;fontSize=9;align=center;fontStyle=1;fontColor=#92400E;" vertex="1" parent="1">
+          <mxGeometry x="200" y="530" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-rd-dmz" value="⚠&#xa;git,CI" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#F59E0B;fillColor=#FEF3C7;fontSize=9;align=center;fontStyle=1;fontColor=#92400E;" vertex="1" parent="1">
+          <mxGeometry x="310" y="530" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-rd-remote" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=14;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="420" y="530" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-rd-cloud" value="✓&#xa;deploy" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#D1FAE5;fontSize=9;align=center;fontStyle=1;fontColor=#047857;" vertex="1" parent="1">
+          <mxGeometry x="530" y="530" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-rd-it" value="⚠&#xa;limited" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#F59E0B;fillColor=#FEF3C7;fontSize=9;align=center;fontStyle=1;fontColor=#92400E;" vertex="1" parent="1">
+          <mxGeometry x="640" y="530" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-rd-rd" value="—" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#E5E7EB;fillColor=#F3F4F6;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="750" y="530" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-rd-sec" value="⚠&#xa;vault" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#F59E0B;fillColor=#FEF3C7;fontSize=9;align=center;fontStyle=1;fontColor=#92400E;" vertex="1" parent="1">
+          <mxGeometry x="860" y="530" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-rd-srv" value="✓&#xa;GitLab" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#D1FAE5;fontSize=9;align=center;fontStyle=1;fontColor=#047857;" vertex="1" parent="1">
+          <mxGeometry x="970" y="530" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-rd-ot" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=14;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="530" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-rd-robots" value="⚠&#xa;test" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#F59E0B;fillColor=#FEF3C7;fontSize=9;align=center;fontStyle=1;fontColor=#92400E;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="530" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-rd-dr" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6B7280;fillColor=#D1D5DB;fontSize=14;align=center;fontStyle=1;fontColor=#374151;opacity=50;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="530" width="100" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- Ligne SÉCURITÉ -->
+        <mxCell id="m-sec-inet" value="⚠&#xa;updates" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#F59E0B;fillColor=#FEF3C7;fontSize=9;align=center;fontStyle=1;fontColor=#92400E;" vertex="1" parent="1">
+          <mxGeometry x="200" y="590" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-sec-dmz" value="✓&#xa;scan" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#D1FAE5;fontSize=9;align=center;fontStyle=1;fontColor=#047857;" vertex="1" parent="1">
+          <mxGeometry x="310" y="590" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-sec-remote" value="✓&#xa;auth" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#D1FAE5;fontSize=9;align=center;fontStyle=1;fontColor=#047857;" vertex="1" parent="1">
+          <mxGeometry x="420" y="590" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-sec-cloud" value="✓&#xa;SIEM" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#D1FAE5;fontSize=9;align=center;fontStyle=1;fontColor=#047857;" vertex="1" parent="1">
+          <mxGeometry x="530" y="590" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-sec-it" value="✓&#xa;agent" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#D1FAE5;fontSize=9;align=center;fontStyle=1;fontColor=#047857;" vertex="1" parent="1">
+          <mxGeometry x="640" y="590" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-sec-rd" value="✓&#xa;agent" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#D1FAE5;fontSize=9;align=center;fontStyle=1;fontColor=#047857;" vertex="1" parent="1">
+          <mxGeometry x="750" y="590" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-sec-sec" value="—" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#E5E7EB;fillColor=#F3F4F6;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="860" y="590" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-sec-srv" value="✓&#xa;all" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#D1FAE5;fontSize=9;align=center;fontStyle=1;fontColor=#047857;" vertex="1" parent="1">
+          <mxGeometry x="970" y="590" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-sec-ot" value="⚠&#xa;relay" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#F59E0B;fillColor=#FEF3C7;fontSize=9;align=center;fontStyle=1;fontColor=#92400E;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="590" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-sec-robots" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=14;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="590" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-sec-dr" value="?" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6B7280;fillColor=#D1D5DB;fontSize=14;align=center;fontStyle=1;fontColor=#374151;opacity=50;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="590" width="100" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- Ligne SERVEURS -->
+        <mxCell id="m-srv-inet" value="⚠&#xa;updates" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#F59E0B;fillColor=#FEF3C7;fontSize=9;align=center;fontStyle=1;fontColor=#92400E;" vertex="1" parent="1">
+          <mxGeometry x="200" y="650" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-srv-dmz" value="✓&#xa;proxy" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#D1FAE5;fontSize=9;align=center;fontStyle=1;fontColor=#047857;" vertex="1" parent="1">
+          <mxGeometry x="310" y="650" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-srv-remote" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=14;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="420" y="650" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-srv-cloud" value="⚠&#xa;backup" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#F59E0B;fillColor=#FEF3C7;fontSize=9;align=center;fontStyle=1;fontColor=#92400E;" vertex="1" parent="1">
+          <mxGeometry x="530" y="650" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-srv-it" value="✓&#xa;services" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#D1FAE5;fontSize=9;align=center;fontStyle=1;fontColor=#047857;" vertex="1" parent="1">
+          <mxGeometry x="640" y="650" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-srv-rd" value="✓&#xa;git,CI" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#D1FAE5;fontSize=9;align=center;fontStyle=1;fontColor=#047857;" vertex="1" parent="1">
+          <mxGeometry x="750" y="650" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-srv-sec" value="✓&#xa;logs" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#D1FAE5;fontSize=9;align=center;fontStyle=1;fontColor=#047857;" vertex="1" parent="1">
+          <mxGeometry x="860" y="650" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-srv-srv" value="—" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#E5E7EB;fillColor=#F3F4F6;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="970" y="650" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-srv-ot" value="⚠&#xa;DMZ" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#F59E0B;fillColor=#FEF3C7;fontSize=9;align=center;fontStyle=1;fontColor=#92400E;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="650" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-srv-robots" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=14;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="650" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-srv-dr" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6B7280;fillColor=#D1D5DB;fontSize=14;align=center;fontStyle=1;fontColor=#374151;opacity=50;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="650" width="100" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- Ligne OT -->
+        <mxCell id="m-ot-inet" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=14;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="200" y="710" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-ot-dmz" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=14;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="310" y="710" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-ot-remote" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=14;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="420" y="710" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-ot-cloud" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=14;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="530" y="710" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-ot-it" value="⚠&#xa;DMZ→" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#F59E0B;fillColor=#FEF3C7;fontSize=9;align=center;fontStyle=1;fontColor=#92400E;" vertex="1" parent="1">
+          <mxGeometry x="640" y="710" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-ot-rd" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=14;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="750" y="710" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-ot-sec" value="⚠&#xa;syslog" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#F59E0B;fillColor=#FEF3C7;fontSize=9;align=center;fontStyle=1;fontColor=#92400E;" vertex="1" parent="1">
+          <mxGeometry x="860" y="710" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-ot-srv" value="⚠&#xa;historian" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#F59E0B;fillColor=#FEF3C7;fontSize=9;align=center;fontStyle=1;fontColor=#92400E;" vertex="1" parent="1">
+          <mxGeometry x="970" y="710" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-ot-ot" value="—" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#E5E7EB;fillColor=#F3F4F6;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="710" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-ot-robots" value="✓&#xa;test" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#D1FAE5;fontSize=9;align=center;fontStyle=1;fontColor=#047857;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="710" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-ot-dr" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6B7280;fillColor=#D1D5DB;fontSize=14;align=center;fontStyle=1;fontColor=#374151;opacity=50;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="710" width="100" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- Ligne ROBOTS -->
+        <mxCell id="m-robots-inet" value="✓&#xa;4G/5G" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#D1FAE5;fontSize=9;align=center;fontStyle=1;fontColor=#047857;" vertex="1" parent="1">
+          <mxGeometry x="200" y="770" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-robots-dmz" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=14;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="310" y="770" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-robots-remote" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=14;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="420" y="770" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-robots-cloud" value="✓&#xa;MQTT" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#D1FAE5;fontSize=9;align=center;fontStyle=1;fontColor=#047857;" vertex="1" parent="1">
+          <mxGeometry x="530" y="770" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-robots-it" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=14;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="640" y="770" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-robots-rd" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=14;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="750" y="770" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-robots-sec" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=14;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="860" y="770" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-robots-srv" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=14;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="970" y="770" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-robots-ot" value="✓&#xa;WiFi test" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#D1FAE5;fontSize=9;align=center;fontStyle=1;fontColor=#047857;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="770" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-robots-robots" value="—" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#E5E7EB;fillColor=#F3F4F6;fontSize=10;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="770" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-robots-dr" value="✗" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6B7280;fillColor=#D1D5DB;fontSize=14;align=center;fontStyle=1;fontColor=#374151;opacity=50;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="770" width="100" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- ==================== LÉGENDE ==================== -->
+        <mxCell id="legend-box" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#E2E8F0;fillColor=#F8FAFC;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="840" width="1360" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-title" value="LÉGENDE &amp; RÈGLES DE FILTRAGE" style="text;html=1;strokeColor=none;fillColor=#2A526E;align=center;verticalAlign=middle;fontSize=11;fontStyle=1;fontColor=#FFFFFF;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="850" width="240" height="22" as="geometry" />
+        </mxCell>
+        
+        <!-- Codes couleur -->
+        <mxCell id="leg-colors-title" value="Codes Couleur:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="880" width="100" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-green" value="✓ Autorisé" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#059669;fillColor=#D1FAE5;fontSize=9;align=center;fontStyle=1;fontColor=#047857;" vertex="1" parent="1">
+          <mxGeometry x="60" y="900" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-orange" value="⚠ Restreint" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#F59E0B;fillColor=#FEF3C7;fontSize=9;align=center;fontStyle=1;fontColor=#92400E;" vertex="1" parent="1">
+          <mxGeometry x="150" y="900" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-red" value="✗ Interdit" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#DC2626;fillColor=#FEE2E2;fontSize=9;align=center;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="240" y="900" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-gray" value="— N/A" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#E5E7EB;fillColor=#F3F4F6;fontSize=9;align=center;" vertex="1" parent="1">
+          <mxGeometry x="330" y="900" width="60" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Définitions -->
+        <mxCell id="leg-def-title" value="Définitions:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="880" width="100" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-def-list" value="• Autorisé: Flux ouvert par défaut (ports spécifiques)&#xa;• Restreint: Flux conditionnel (MFA, proxy, DMZ, horaires)&#xa;• Interdit: Flux bloqué (deny all)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="420" y="900" width="280" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- Règles OT -->
+        <mxCell id="leg-ot-title" value="Règles OT (Chambéry):" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontStyle=1;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="720" y="880" width="150" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-ot-list" value="• Aucun flux direct Internet ↔ OT&#xa;• Passage obligatoire par DMZ IT/OT&#xa;• Flux unidirectionnels (OT → IT lecture)&#xa;• Jump server pour administration" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="720" y="900" width="220" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Principes -->
+        <mxCell id="leg-principles-title" value="Principes de Sécurité:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontStyle=1;fontColor=#2A526E;" vertex="1" parent="1">
+          <mxGeometry x="960" y="880" width="150" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-principles-list" value="• Default Deny (tout interdit sauf explicite)&#xa;• Least Privilege (minimum nécessaire)&#xa;• Defense in Depth (couches multiples)&#xa;• Zero Trust (vérification continue)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="960" y="900" width="220" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Référentiels -->
+        <mxCell id="leg-ref-title" value="Référentiels:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontStyle=1;fontColor=#64748B;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="880" width="100" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-ref-list" value="ISO 27001 A.13&#xa;NIST SP 800-41&#xa;ANSSI Guide&#xa;IEC 62443 (OT)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=8;fontFamily=Courier New;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="900" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
